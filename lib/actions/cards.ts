@@ -12,7 +12,7 @@ export async function createCard(data: CardFormData): Promise<Card> {
 
     const newCard = await db.execute({
         sql: `SELECT * FROM cards WHERE id = ?`,
-        args: [result.lastInsertRowid],
+        args: [result.lastInsertRowid!],
     });
 
     revalidatePath("/");
