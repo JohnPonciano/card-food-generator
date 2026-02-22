@@ -1,7 +1,8 @@
 import { createClient } from "@libsql/client";
 
 export const db = createClient({
-    url: "file:./local.db",
+    url: "libsql://novotel-food-cards-haeritos.aws-us-east-2.turso.io",
+    authToken: "eyJhbGciOiJFZERTQSIsInR5cCI6IkpXVCJ9.eyJhIjoicnciLCJpYXQiOjE3NzE3OTUxNjEsImlkIjoiODk0ODFmNjctODY0Mi00Mjg0LWI0MjEtNjZiYzQwNDQ2NDYxIiwicmlkIjoiNmVmMDZjNmItMGY4MC00NDgyLWI1OTMtNGZjZmE0ZTVhM2M3In0.QQRzrDv8WVRqoBOtfFNx4cDDzuIhAFljwP06lyBAh_tahbbGmgZE_QSK43DWAHaRGIjoSSye_PfXFOK7yqwsAw",
 });
 
 export async function initDatabase() {
